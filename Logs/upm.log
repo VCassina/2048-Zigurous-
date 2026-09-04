@@ -1,0 +1,30 @@
+[2026-09-04T13:20:41.565Z][INFO] Command-line: 'C:\\Program Files\\Unity\\Hub\\Editor\\6000.5.10f1\\Editor\\Data\\Resources\\PackageManager\\Server\\UnityPackageManager.exe' server -s 15764 --ipc-path Unity-Upm-15764 -l 2 --log-file C:\\Users\\victo\\Desktop\\Code\\POO\\Cursus\\03_Unity_Solos\\02_2048_Reloaded/Logs/upm.log
+[2026-09-04T13:20:41.602Z][INFO] IPC server started (IPC path=Unity-Upm-15764).
+[2026-09-04T13:20:41.602Z][INFO] Hint: To connect to this UPM instance, launch Unity with the command-line parameter -upmIpcPath Upm-15764.
+[2026-09-04T13:20:56.508Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-09-04T13:20:56.804Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-09-04T13:20:56.818Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-09-04T13:20:57.025Z][INFO] config:project:get-registries --> 200 (208 ms)
+[2026-09-04T13:20:57.374Z][INFO] project:list-packages --> 200 (866 ms)
+[2026-09-04T13:20:57.378Z][INFO] project:list-packages --> 200 (574 ms)
+[2026-09-04T13:21:11.459Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-09-04T13:21:11.506Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-09-04T13:21:11.834Z][INFO] project:list-packages --> 200 (376 ms)
+[2026-09-04T13:21:11.876Z][INFO] project:list-packages --> 200 (370 ms)
+[2026-09-04T13:21:14.435Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-09-04T13:21:14.625Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-09-04T13:21:14.632Z][INFO] project:list-packages --> 200 (197 ms)
+[2026-09-04T13:21:14.634Z][INFO] config:project:get-registries --> 200 (9 ms)
+[2026-09-04T13:21:20.504Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-09-04T13:21:20.721Z][INFO] project:list-packages --> 200 (217 ms)
+[2026-09-04T13:21:23.021Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-09-04T13:21:24.166Z][INFO] project:list-packages --> 200 (1145 ms)
