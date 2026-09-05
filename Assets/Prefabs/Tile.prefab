@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6713086185969340469}
   - component: {fileID: 4668648549251945792}
   - component: {fileID: 2816276836085909875}
+  - component: {fileID: -8035222817564439945}
   m_Layer: 5
   m_Name: Tile
   m_TagString: Untagged
@@ -76,6 +77,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-8035222817564439945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6737678374107124198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174f6bfacb32f1b4cbbf40eaebecc82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileBehavior
 --- !u!1 &7399231957165193155
 GameObject:
   m_ObjectHideFlags: 0
