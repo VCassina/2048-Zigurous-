@@ -56568,3 +56568,928 @@ BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:30)
 (Filename: Assets/Scripts/TileBehavior.cs Line: 55)
 
 Asset Pipeline Refresh (id=c7fec80f48da1174c8fe6bf67e87e44f): Total: 0.011 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=fb7e08991e3491140b44f19b5150cc50): Total: 0.004 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.440 ms
+	Integration:            239.883 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   242.334 ms
+Unloading 2 unused Assets / (165.4 KB). Loaded Objects now: 9774.
+Memory consumption went from 0.72 GB to 0.72 GB.
+Total: 22.595200 ms (FindLiveObjects: 0.634200 ms CreateObjectMapping: 0.558700 ms MarkObjects: 21.352400 ms  DeleteObjects: 0.048500 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+SpriteAtlasPacking completed in 0.005439 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.598 ms
+	Integration:            228.333 ms
+	Integration of assets:  0.023 ms
+	Thread Wait Time:       0.011 ms
+	Total Operation Time:   229.966 ms
+Spawning tile in cell at coordinates: (2, 0)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:29)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Spawning tile in cell at coordinates: (0, 3)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:30)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.594 ms
+	Integration:            229.747 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.009 ms
+	Total Operation Time:   232.352 ms
+Unloading 2 unused Assets / (155.4 KB). Loaded Objects now: 9774.
+Memory consumption went from 0.72 GB to 0.72 GB.
+Total: 23.367000 ms (FindLiveObjects: 0.570400 ms CreateObjectMapping: 0.314100 ms MarkObjects: 22.423900 ms  DeleteObjects: 0.057300 ms)
+
+SpriteAtlasPacking completed in 0.004905 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.418 ms
+	Integration:            226.934 ms
+	Integration of assets:  0.023 ms
+	Thread Wait Time:       0.008 ms
+	Total Operation Time:   228.382 ms
+Spawning tile in cell at coordinates: (0, 1)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:29)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Spawning tile in cell at coordinates: (0, 2)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:30)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.514 ms
+	Integration:            232.803 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.013 ms
+	Total Operation Time:   235.332 ms
+Unloading 2 unused Assets / (187.4 KB). Loaded Objects now: 9774.
+Memory consumption went from 0.72 GB to 0.72 GB.
+Total: 24.969900 ms (FindLiveObjects: 0.598600 ms CreateObjectMapping: 0.534200 ms MarkObjects: 23.780000 ms  DeleteObjects: 0.055900 ms)
+
+SpriteAtlasPacking completed in 0.004922 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.692 ms
+	Integration:            227.455 ms
+	Integration of assets:  0.023 ms
+	Thread Wait Time:       0.001 ms
+	Total Operation Time:   229.171 ms
+Spawning tile in cell at coordinates: (1, 3)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:29)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Spawning tile in cell at coordinates: (1, 0)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:30)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.416 ms
+	Integration:            230.710 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.011 ms
+	Total Operation Time:   233.139 ms
+Unloading 2 unused Assets / (204.0 KB). Loaded Objects now: 9774.
+Memory consumption went from 0.72 GB to 0.72 GB.
+Total: 23.720900 ms (FindLiveObjects: 0.602100 ms CreateObjectMapping: 0.551700 ms MarkObjects: 22.515800 ms  DeleteObjects: 0.050200 ms)
+
+SpriteAtlasPacking completed in 0.004940 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.537 ms
+	Integration:            231.958 ms
+	Integration of assets:  0.029 ms
+	Thread Wait Time:       0.012 ms
+	Total Operation Time:   233.537 ms
+Spawning tile in cell at coordinates: (0, 0)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:29)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Spawning tile in cell at coordinates: (2, 0)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:30)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.704 ms
+	Integration:            231.811 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.006 ms
+	Total Operation Time:   234.524 ms
+Unloading 2 unused Assets / (186.4 KB). Loaded Objects now: 9774.
+Memory consumption went from 0.72 GB to 0.72 GB.
+Total: 22.644200 ms (FindLiveObjects: 0.756900 ms CreateObjectMapping: 0.315000 ms MarkObjects: 21.507700 ms  DeleteObjects: 0.063600 ms)
+
+SpriteAtlasPacking completed in 0.005229 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.721 ms
+	Integration:            247.178 ms
+	Integration of assets:  0.028 ms
+	Thread Wait Time:       0.018 ms
+	Total Operation Time:   248.944 ms
+Spawning tile in cell at coordinates: (3, 1)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:29)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Spawning tile in cell at coordinates: (2, 3)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:30)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.183 ms
+	Integration:            221.290 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.006 ms
+	Total Operation Time:   223.482 ms
+Unloading 2 unused Assets / (169.7 KB). Loaded Objects now: 9774.
+Memory consumption went from 0.72 GB to 0.72 GB.
+Total: 22.395000 ms (FindLiveObjects: 0.555600 ms CreateObjectMapping: 0.307500 ms MarkObjects: 21.460700 ms  DeleteObjects: 0.069900 ms)
+
+SpriteAtlasPacking completed in 0.004523 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.363 ms
+	Integration:            224.698 ms
+	Integration of assets:  0.023 ms
+	Thread Wait Time:       0.015 ms
+	Total Operation Time:   226.100 ms
+Spawning tile in cell at coordinates: (2, 2)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:29)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Spawning tile in cell at coordinates: (3, 0)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:30)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.188 ms
+	Integration:            226.946 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.008 ms
+	Total Operation Time:   229.143 ms
+Unloading 2 unused Assets / (198.3 KB). Loaded Objects now: 9774.
+Memory consumption went from 0.72 GB to 0.72 GB.
+Total: 24.580300 ms (FindLiveObjects: 0.628100 ms CreateObjectMapping: 0.548300 ms MarkObjects: 23.352800 ms  DeleteObjects: 0.050400 ms)
+
+Asset Pipeline Refresh (id=4363ca38be2dd2f4b968bde0ceefcb19): Total: 0.011 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=42dea87ade8751542aa1c04e07cdb898): Total: 0.006 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+[Licensing::Client] Successfully resolved entitlement details
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 0.0999ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.10f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/victo/Desktop/Code/POO/Cursus/2-Copy_code/03_Unity_Solos/02_2048_Reloaded
+ExitCode: 4 Duration: 0s325ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+*** Tundra requires additional run (0.17 seconds), 0 items updated, 613 evaluated
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.10f1\Editor\Data\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\6000.5.10f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: C:/Users/victo/Desktop/Code/POO/Cursus/2-Copy_code/03_Unity_Solos/02_2048_Reloaded
+ExitCode: 0 Duration: 2s345ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.10f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/victo/Desktop/Code/POO/Cursus/2-Copy_code/03_Unity_Solos/02_2048_Reloaded
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Current configuration matches the requested one, skipping
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - 200 - application/grpc 1.7800ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll, with 142 defines and 355 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 13.7320ms
+ExitCode: 0 Duration: 2s79ms
+Finished compiling graph: 1127 nodes, 22340 flattened edges (18620 ToBuild, 178 ToUse), maximum node priority 1259
+[ 606/1123  0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[ 872/1123  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[1119/1123  1s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+[1120/1123  0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll, with 142 defines and 355 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[1121/1123  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[1122/1123  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+*** Tundra build success (2.04 seconds), 6 items updated, 1123 evaluated
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Refreshing native plugins compatible for Editor in 4.43 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.089 seconds
+Domain Reload Profiling: 3474ms
+	BeginReloadAssembly (845ms)
+		DisableScriptedObjects (127ms)
+		CreateAndSetChildDomain (465ms)
+	RebuildCommonClasses (9ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (74ms)
+	LoadAllAssembliesAndSetupDomain (442ms)
+		LoadAssemblies (173ms)
+		AnalyzeDomain (234ms)
+			TypeCache.Refresh (10ms)
+			BuildScriptInfoCaches (199ms)
+			ResolveRequiredComponents (23ms)
+	FinalizeReload (2090ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (179ms)
+			ProcessInitializeOnLoadAttributes (372ms)
+			ProcessInitializeOnLoadMethodAttributes (143ms)
+			AfterProcessingInitializeOnLoad (11ms)
+		AwakeInstancesAfterBackupRestoration (498ms)
+Importing 'GUID: 1d69f91debda51c46a4b2b94c86c67b7 - Path: Assets/Scenes/GamingScene.unity' with importer (DefaultImporter)
+Imported 'GUID: 1d69f91debda51c46a4b2b94c86c67b7' -> (Import Result ID: 'c8217b187e49626ff4503e11200b5ee6') in 0.007 seconds [static dependencies only]. Details - ImportResultOutputID=d86f5d3908ef94fbf6a4a1cf70cb343e DependenciesID=02b710b6f371c3b5a58098c04ac7e906 StaticDependenciesID=b155aacbd58b314a59204843fca132ee 
+Importing 'GUID: 6cbfb9442c1ad2442bc08a9d77f506d8 - Path: Assets/Prefabs/TileStates/2.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 6cbfb9442c1ad2442bc08a9d77f506d8' -> (Import Result ID: '6922a344d6c9b7d5428af46b28ffc2d9') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=4adbaa5d753734a27b8e96f5ebfe68d3 DependenciesID=e613b6d7607be64ad951cac39549e6de StaticDependenciesID=69b7ae7c7cded0a455d32e2c49020a86 
+Importing 'GUID: 44c416fde68735d4a89872ecfe46b239 - Path: Assets/Prefabs/Tile.prefab' with importer (PrefabImporter)
+Imported 'GUID: 44c416fde68735d4a89872ecfe46b239' -> (Import Result ID: '6c18142254161368aa7c76c225046ace') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=869329cd26f4a7f39de98371896aa438 DependenciesID=25a0d54ab65c8c75aac464dc4c519c91 StaticDependenciesID=d4b98d327f6264e2fba578102b9cc4d4 
+Refreshing native plugins compatible for Editor in 3.59 ms, found 5 plugins.
+
+Asset Pipeline Refresh (id=faeebb54ffd01684390da3c4186ca93f): Total: 9.366 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=3 (actual=3, local cache=0, cache server=0)
+		Asset DB Process Time: managed=4 ms, native=2376 ms
+		Asset DB Callback time: managed=309 ms, native=7 ms
+		Scripting: domain reloads=1, domain reload time=1556 ms, compile time=5113 ms, other=0 ms
+		Project Asset Count: scripts=1610, non-scripts=3208
+		Asset File Changes: new=0, changed=3, moved=0, deleted=5
+		Scan Filter Count: 0
+	InvokePackagesCallback: 3.044ms
+	ApplyChangesToAssetFolders: 0.491ms
+	Scan: 31.306ms
+	Collect global state as custom dependencies: 5.681ms
+	OnSourceAssetsModified: 0.097ms
+	ProcessAssetsWithTransientArtifactChanges: 7.079ms
+	CategorizeAssets: 55.281ms
+	CompileScripts: 5112.533ms
+	ImportOutOfDateAssets: 2165.553ms (2110.795ms without children)
+		ImportManagerImport: 21.149ms (1.664ms without children)
+		CollectScriptTypesHashes: 3.597ms
+		ReloadNativeAssets: 1.570ms
+		UnloadImportedAssets: 0.291ms
+		ReloadImportedAssets: 1.675ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.717ms
+		ImportSchedulerStart: 30.994ms
+	PostProcessAllAssets: 308.346ms
+		XRBuildSystem.XRAssetImported 0.779ms
+		MonoPostProcessAllAssets: 306.808ms
+			SyncVS.PostprocessSyncProject 253.223ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 9.544ms
+			AssetChangedListener.OnPostprocessAllAssets 5.297ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 5.276ms
+			AssetPostprocessor.OnPostprocessAllAssets 3.661ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.813ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.753ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.717ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.190ms
+			MaterialPostprocessor.OnPostprocessAllAssets 1.022ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.931ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.914ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.888ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.874ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.713ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.683ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.561ms
+			PSDImportPostProcessor.OnPostprocessAllAssets 0.521ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 0.519ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.421ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.417ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.306ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.300ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.299ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.285ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.257ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.250ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.242ms
+			PostProcessor.OnPostprocessAllAssets 0.218ms
+			AssetEvents.OnPostprocessAllAssets 0.209ms
+			SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets 0.193ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.148ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.140ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.135ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.133ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.128ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.116ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.102ms
+			PSDImporterAssetPostProcessor.OnPostprocessAllAssets 0.099ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.074ms
+			AssetProcessor.OnPostprocessAllAssets 0.053ms
+	PostAssetChangesProfiler: 7.574ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.247ms
+	PersistCurrentRevisions: 0.203ms
+	GenerateScriptTypeHashes: 2.936ms
+	GenerateScriptTypeSerializationHashes: 5.220ms
+	Untracked: 1660.352ms
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+SpriteAtlasPacking completed in 0.005480 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+The referenced script (Unknown) on this Behaviour is missing!
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            4.460 ms
+	Integration:            260.296 ms
+	Integration of assets:  0.027 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   264.793 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.999 ms
+	Integration:            222.044 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.008 ms
+	Total Operation Time:   225.053 ms
+Unloading 58 unused Assets / (457.5 KB). Loaded Objects now: 9731.
+Memory consumption went from 0.71 GB to 0.71 GB.
+Total: 22.450600 ms (FindLiveObjects: 0.593700 ms CreateObjectMapping: 0.308100 ms MarkObjects: 21.284100 ms  DeleteObjects: 0.263500 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+[Licensing::Client] Successfully resolved entitlement details
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping - 200 - application/grpc 0.0868ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.10f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/victo/Desktop/Code/POO/Cursus/2-Copy_code/03_Unity_Solos/02_2048_Reloaded
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Current configuration matches the requested one, skipping
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - 200 - application/grpc 0.9901ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.10f1\Editor\Data\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\6000.5.10f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: C:/Users/victo/Desktop/Code/POO/Cursus/2-Copy_code/03_Unity_Solos/02_2048_Reloaded
+ExitCode: 4 Duration: 0s238ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+[ 873/1123  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra requires additional run (0.20 seconds), 1 items updated, 872 evaluated
+ExitCode: 0 Duration: 1s335ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.10f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/victo/Desktop/Code/POO/Cursus/2-Copy_code/03_Unity_Solos/02_2048_Reloaded
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Current configuration matches the requested one, skipping
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/ConfigurePostProcessors'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/ConfigurePostProcessors - 200 - application/grpc 1.0199ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll, with 142 defines and 355 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running Unity.Jobs.CodeGen.JobsILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly - 200 - application/grpc 11.8648ms
+ExitCode: 0 Duration: 0s821ms
+Finished compiling graph: 1127 nodes, 22340 flattened edges (18620 ToBuild, 178 ToUse), maximum node priority 1259
+[ 606/1123  0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[ 872/1123  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[1119/1123  0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+[1120/1123  0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll, with 142 defines and 355 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[1121/1123  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[1122/1123  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+*** Tundra build success (0.79 seconds), 6 items updated, 1123 evaluated
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Refreshing native plugins compatible for Editor in 3.14 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.273 seconds
+Domain Reload Profiling: 4000ms
+	BeginReloadAssembly (1149ms)
+		DisableScriptedObjects (123ms)
+		CreateAndSetChildDomain (581ms)
+	RebuildCommonClasses (10ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (104ms)
+	LoadAllAssembliesAndSetupDomain (449ms)
+		LoadAssemblies (187ms)
+		AnalyzeDomain (246ms)
+			TypeCache.Refresh (13ms)
+			BuildScriptInfoCaches (205ms)
+			ResolveRequiredComponents (25ms)
+	FinalizeReload (2274ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (190ms)
+			ProcessInitializeOnLoadAttributes (444ms)
+			ProcessInitializeOnLoadMethodAttributes (179ms)
+			AfterProcessingInitializeOnLoad (11ms)
+		AwakeInstancesAfterBackupRestoration (528ms)
+Importing 'GUID: 1d69f91debda51c46a4b2b94c86c67b7 - Path: Assets/Scenes/GamingScene.unity' with importer (DefaultImporter)
+Imported 'GUID: 1d69f91debda51c46a4b2b94c86c67b7' -> (Import Result ID: '19e3b3f5dd88f6536b53ed947a2b5746') in 0.007 seconds [static dependencies only]. Details - ImportResultOutputID=d86f5d3908ef94fbf6a4a1cf70cb343e DependenciesID=d1de16d4cbbfdc0c18054886a4d4cbfa StaticDependenciesID=71411d2fa5981121154ec72b1b4f52cc 
+Importing 'GUID: 6cbfb9442c1ad2442bc08a9d77f506d8 - Path: Assets/Prefabs/TileStates/2.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 6cbfb9442c1ad2442bc08a9d77f506d8' -> (Import Result ID: '059bb46a26a0616b3b229b70ab924009') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=4adbaa5d753734a27b8e96f5ebfe68d3 DependenciesID=d12c42b8709fd78ffdd863809a38448a StaticDependenciesID=ec2ee763e2488558caf4b04e1f9139af 
+Importing 'GUID: 44c416fde68735d4a89872ecfe46b239 - Path: Assets/Prefabs/Tile.prefab' with importer (PrefabImporter)
+Imported 'GUID: 44c416fde68735d4a89872ecfe46b239' -> (Import Result ID: 'ea146658321428d3f2374ca8427e573b') in 0.034 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=affff3ae619fc9f3d38d1690d6e0e2f2 DependenciesID=60f5814774e89d5d196d953f94e41950 StaticDependenciesID=3a34fa49f02cf029db545aeb31c897d4 
+Refreshing native plugins compatible for Editor in 3.47 ms, found 5 plugins.
+
+Asset Pipeline Refresh (id=13f51a27f331e3f498c152e9ed3621e8): Total: 7.480 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=3 (actual=3, local cache=0, cache server=0)
+		Asset DB Process Time: managed=4 ms, native=2609 ms
+		Asset DB Callback time: managed=402 ms, native=8 ms
+		Scripting: domain reloads=1, domain reload time=1829 ms, compile time=2625 ms, other=0 ms
+		Project Asset Count: scripts=1610, non-scripts=3208
+		Asset File Changes: new=5, changed=8, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 3.531ms
+	ApplyChangesToAssetFolders: 0.563ms
+	Scan: 35.895ms
+	Collect global state as custom dependencies: 4.491ms
+	OnSourceAssetsModified: 0.762ms
+	ProcessAssetsWithTransientArtifactChanges: 11.768ms
+	CategorizeAssets: 59.883ms
+	CompileScripts: 2625.496ms
+	ImportOutOfDateAssets: 2384.046ms (2295.071ms without children)
+		ImportManagerImport: 47.657ms (1.595ms without children)
+			UpdateCategorizedAssets: 0.052ms
+		CollectScriptTypesHashes: 1.216ms
+		ReloadNativeAssets: 1.050ms
+		UnloadImportedAssets: 0.343ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.712ms
+		ImportSchedulerStart: 39.175ms
+	PostProcessAllAssets: 401.152ms
+		XRBuildSystem.XRAssetImported 1.149ms
+		VersionControlSettings.HiddenFilePostprocess 0.227ms
+		PostProcessCallbackCreateDeferredMaterials 0.050ms
+		MonoPostProcessAllAssets: 398.724ms
+			SyncVS.PostprocessSyncProject 327.800ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 13.728ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 8.236ms
+			AssetChangedListener.OnPostprocessAllAssets 6.793ms
+			AssetPostprocessor.OnPostprocessAllAssets 5.352ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 2.417ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.001ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.619ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.569ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 1.033ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.981ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.907ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.878ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.875ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.854ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.721ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.680ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.509ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 0.503ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.494ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.474ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.464ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.393ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.385ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.381ms
+			AssetEvents.OnPostprocessAllAssets 0.327ms
+			PostProcessor.OnPostprocessAllAssets 0.293ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.292ms
+			SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets 0.277ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.275ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.216ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.215ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.211ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.192ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.187ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.184ms
+			PSDImportPostProcessor.OnPostprocessAllAssets 0.166ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.155ms
+			PSDImporterAssetPostProcessor.OnPostprocessAllAssets 0.118ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.116ms
+			AssetProcessor.OnPostprocessAllAssets 0.072ms
+	PostAssetChangesProfiler: 8.094ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.179ms
+	PersistCurrentRevisions: 0.255ms
+	GenerateScriptTypeHashes: 2.673ms
+	GenerateScriptTypeSerializationHashes: 4.664ms
+	Untracked: 1930.108ms
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+SpriteAtlasPacking completed in 0.005641 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            12.312 ms
+	Integration:            259.415 ms
+	Integration of assets:  0.157 ms
+	Thread Wait Time:       0.004 ms
+	Total Operation Time:   271.888 ms
+Spawning tile in cell at coordinates: (0, 1)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:29)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Spawning tile in cell at coordinates: (3, 2)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:30)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Unloading 11 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.918 ms
+	Integration:            222.521 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.009 ms
+	Total Operation Time:   225.451 ms
+Unloading 23 unused Assets / (62.3 KB). Loaded Objects now: 9781.
+Memory consumption went from 0.71 GB to 0.71 GB.
+Total: 21.451100 ms (FindLiveObjects: 0.587900 ms CreateObjectMapping: 0.324300 ms MarkObjects: 20.470300 ms  DeleteObjects: 0.067500 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+SpriteAtlasPacking completed in 0.005201 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.341 ms
+	Integration:            222.385 ms
+	Integration of assets:  0.022 ms
+	Thread Wait Time:       0.011 ms
+	Total Operation Time:   223.758 ms
+Spawning tile in cell at coordinates: (3, 1)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:29)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Spawning tile in cell at coordinates: (1, 0)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:30)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.126 ms
+	Integration:            217.079 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.008 ms
+	Total Operation Time:   219.216 ms
+Unloading 2 unused Assets / (199.6 KB). Loaded Objects now: 9781.
+Memory consumption went from 0.71 GB to 0.71 GB.
+Total: 22.240100 ms (FindLiveObjects: 0.590000 ms CreateObjectMapping: 0.328200 ms MarkObjects: 21.260900 ms  DeleteObjects: 0.059900 ms)
+
+SpriteAtlasPacking completed in 0.004582 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.483 ms
+	Integration:            223.253 ms
+	Integration of assets:  0.022 ms
+	Thread Wait Time:       0.006 ms
+	Total Operation Time:   224.763 ms
+Spawning tile in cell at coordinates: (1, 2)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:29)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Spawning tile in cell at coordinates: (0, 1)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:30)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.523 ms
+	Integration:            218.764 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.008 ms
+	Total Operation Time:   221.297 ms
+Unloading 2 unused Assets / (218.1 KB). Loaded Objects now: 9781.
+Memory consumption went from 0.71 GB to 0.71 GB.
+Total: 22.627200 ms (FindLiveObjects: 0.589100 ms CreateObjectMapping: 0.329300 ms MarkObjects: 21.650500 ms  DeleteObjects: 0.057000 ms)
+
+SpriteAtlasPacking completed in 0.004601 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.524 ms
+	Integration:            223.290 ms
+	Integration of assets:  0.025 ms
+	Thread Wait Time:       0.009 ms
+	Total Operation Time:   224.847 ms
+Spawning tile in cell at coordinates: (1, 2)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:29)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Spawning tile in cell at coordinates: (2, 2)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:30)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.172 ms
+	Integration:            218.259 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.007 ms
+	Total Operation Time:   220.439 ms
+Unloading 2 unused Assets / (181.1 KB). Loaded Objects now: 9781.
+Memory consumption went from 0.71 GB to 0.71 GB.
+Total: 21.265300 ms (FindLiveObjects: 0.592700 ms CreateObjectMapping: 0.305100 ms MarkObjects: 20.303300 ms  DeleteObjects: 0.063100 ms)
+
+SpriteAtlasPacking completed in 0.004639 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.533 ms
+	Integration:            226.246 ms
+	Integration of assets:  0.027 ms
+	Thread Wait Time:       0.014 ms
+	Total Operation Time:   227.820 ms
+Spawning tile in cell at coordinates: (1, 1)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:29)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
+Spawning tile in cell at coordinates: (3, 0)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+TileBehavior:Spawn (CellBehavior) (at Assets/Scripts/TileBehavior.cs:55)
+BoardBehavior:CreateTile () (at Assets/Scripts/BoardBehavior.cs:46)
+BoardBehavior:Start () (at Assets/Scripts/BoardBehavior.cs:30)
+
+(Filename: Assets/Scripts/TileBehavior.cs Line: 55)
+
