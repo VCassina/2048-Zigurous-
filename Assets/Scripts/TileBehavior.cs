@@ -45,16 +45,6 @@ public class TileBehavior : MonoBehaviour
     // Fait apparaître la tuile avec l'état initial et s'associe à la cellule transmise en paramètre par le parent.
     public void Spawn(CellBehavior cell)
     {
-        // Vérification si la cellule transmise en paramètre n'est pas nulle avant de l'associer.
-        if (cell == null)
-        {
-            Debug.LogWarning("Attempted to spawn tile in a null cell.");
-        }
-        else {
-            // Fonctionne ! Il a bien trouvé une cellule valide et aléatoire pour s'associer.
-            Debug.Log("Spawning tile in cell at coordinates: " + cell.coordinates);
-        }
-
         // Associer cette tuile à la cellule transmise en paramètre.
         // Cela evite d'avoir à déclarer this.tile = tile dans la cellule sous conditionnement d'avoir déjà une tuile associée.
         // Ce qui compliquerait la gestion des références croisées entre les tuiles et les cellules.
@@ -68,5 +58,22 @@ public class TileBehavior : MonoBehaviour
         }
         // Et application de la position de la tuile sur la cellule associée.
         transform.position = cell.transform.position;
+    }
+
+    // Et enfin la fonction de mouvement individuel.
+    public void MoveTo(CellBehavior cell)
+    {
+        // Libérer l'ancienne cellule pour ne pas la laisser "occupied" fantôme.
+        if (this.cell != null)
+        {
+            this.cell.tile = null;
+        }
+        // Même code que Spawn(), on doit prendre la cellule transmise en paramètre et mettre à jour les références croisées.
+        this.cell = cell;
+        if (this.cell != null)
+        {
+            this.cell.tile = this;
+        }
+        transform.position = cell.transform.position; 
     }
 }

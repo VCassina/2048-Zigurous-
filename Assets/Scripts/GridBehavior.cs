@@ -5,8 +5,8 @@ using System.Collections;
 public class GridBehavior : MonoBehaviour
 {
     // Ici, les tableaux ne seront pas reconnus car
-    private RowBehavior[] rows;
-    private CellBehavior[] cells;
+    public RowBehavior[] rows;
+    public CellBehavior[] cells;
      // Regroupe les Rows et les Cells dans deux tableaux.
     void Awake()
     {
@@ -38,6 +38,7 @@ public class GridBehavior : MonoBehaviour
     // Déclaration eponyme pour la syntaxe même si on renverra null ou cells[x,y];
     public CellBehavior GetRandomEmptyCell()
     {
+        Debug.Log("Let's try GetRandomEmptyCell");
         // Partir d'un index aléatoire dans le tableau.
         int index = Random.Range(0, cells.Length);
         // C'est quoi l'index qu'il a choisi ? C'est bien aléatoire ! :thumbsup:
@@ -45,6 +46,8 @@ public class GridBehavior : MonoBehaviour
         // Mémoriser le point de départ pour s'assurer d'avoir parcouru toutes les cellules au maximum une fois.
         int startingIndex = index;
         // Tant que la cellule actuelle est occupée, [...]
+        int safetyCounter = 0; // Limite de sécurité
+        const int MAX_ITERATIONS = 100; // Nombre maximal d'itérations
         while (cells[index].occupied)
         {
             // Il va falloir venir chercher la cellule suivante.
@@ -59,8 +62,43 @@ public class GridBehavior : MonoBehaviour
             {
                 return null;
             }
-        }
+            safetyCounter++;
+            if (safetyCounter >= MAX_ITERATIONS)
+            {
+                return null;
+            }
+        } 
          // Sortir de la boucle signifie qu'une cellule vide a été trouvée, il faut la renvoyer.
          return cells[index];
+    } 
+
+    // Possibilité de sélectionner n'importe quelle cellule en fonction de ses coordonnées.
+    public CellBehavior GetCell(Vector2Int coordinates)
+    {
+        if (coordinates.x >= 0 && coordinates.x < rows[0].cells.Length && coordinates.y >= 0 && coordinates.y < rows.Length)
+        // Renvoie d'une cellule en fonction des coordonnées fournies.
+        {
+            return rows[coordinates.y].cells[coordinates.x];
+        }
+        else
+        {
+            return null;
+        }
+        
+    }
+    
+    public CellBehavior GetAdjacentCell(CellBehavior cell, Vector2Int direction) 
+    {
+        if (cell == null)
+        {
+            return null;
+        }
+        // Récupération des coordonnées de la cellule.
+        Vector2Int coordinates = cell.coordinates;
+        // Calcul des coordonnées de la cellule adjacente en fonction de la direction spécifiée.
+        coordinates.x += direction.x;
+        // Inverser la direction sur l'axe Y pour correspondre à la logique du plateau.
+        coordinates.y -= direction.y;
+        return GetCell(new Vector2Int(coordinates.x, coordinates.y));
     }
 }
