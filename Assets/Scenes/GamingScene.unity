@@ -2025,6 +2025,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 060462fea717baf4fb83af91dceeed0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridBehavior
+  rows: []
+  cells: []
 --- !u!1 &1554716934
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,6 +2096,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 581a115769de40e489ed299b3bbad308, type: 2}
   - {fileID: 11400000, guid: 7f83ebe274f0b9644b7e5f95faf81224, type: 2}
   - {fileID: 11400000, guid: af5d8a5ca119a5b49afc30c99a82960c, type: 2}
+  gridCubicDimension: 0
 --- !u!1 &1690371082
 GameObject:
   m_ObjectHideFlags: 0

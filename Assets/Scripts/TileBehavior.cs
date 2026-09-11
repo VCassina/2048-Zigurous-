@@ -3,6 +3,8 @@ using UnityEngine;
 using TMPro;
 // Engine.UI pour gérer les composants UI.
 using UnityEngine.UI;
+// System.Collections pour utiliser IEnumerator et les coroutines.
+using System.Collections;
 
 public class TileBehavior : MonoBehaviour
 {
@@ -17,6 +19,9 @@ public class TileBehavior : MonoBehaviour
     private TextMeshProUGUI text;
     // Référence au composant Image pour afficher le fond de la tuile.
     private Image backgroundImage;
+    // Initialiser le temps écoulé et la durée de l'animation.
+    private float elipsed;
+    public float duration;
 
     // Répond aux attributions de Text et d'IMG à afficher selon les Prefab de TileStates.
     void Awake()
@@ -32,11 +37,12 @@ public class TileBehavior : MonoBehaviour
         // Ajouter l'état reçu à la tuile instantiée (l'objet actuel).
         this.state = state;
         this.score = number;
-        // Mise à l'alpha 255 (souvent d'origine inconnue).
-        // Tout en appliquant la couleur.
+
+        // Applaiquer la couleur.
         Color bgColor = state.backgroundColor;
         bgColor.a = 1f;
         backgroundImage.color = bgColor;
+
         // Mettre à jour le texte affiché avec le nouveau score qui est convenablement converti en chaîne.
         text.text = number.ToString();
         text.color = state.textColor;
@@ -74,6 +80,27 @@ public class TileBehavior : MonoBehaviour
         {
             this.cell.tile = this;
         }
-        transform.position = cell.transform.position; 
+        StartCoroutine(Animate(cell.transform.position));
+    }
+
+    // Un IEnumerator est un type utilisé pour les coroutines dans Unity, permettant d'animer des objets sur plusieurs frames.
+    // Cependant rien n'est renvoyé directement par la coroutine, elle est simplement exécutée sur plusieurs frames.
+    public IEnumerator Animate(Vector3 to)
+    {
+        // Stocker la position de départ de l'object tuile avant de commencer l'animation.
+        Vector3 from = transform.position;
+        // Boucle d'animation jusqu'à ce que le temps écoulé atteigne la durée.
+        elipsed = 0f;
+        while (elipsed < duration)
+        {
+           // Transformation avec Lerp entre la position de départ et la position cible en fonction du temps écoulé.
+           transform.position = Vector3.Lerp(from, to, elipsed / duration);
+           // Mettre à jour le temps écoulé.
+           elipsed += Time.deltaTime;
+           // Attendre la prochaine frame, concept de coroutine dans Unity.
+           yield return null;
+        }
+        // S'assurer que la position finale est exactement celle souhaitée, même si la boucle d'animation n'a pas atteint exactement la fin.
+        transform.position = to;
     }
 }

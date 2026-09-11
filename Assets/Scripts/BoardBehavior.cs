@@ -1,6 +1,7 @@
 using UnityEngine;
 // Script gérant le comportement des listes (tableau dynamique).
 using System.Collections.Generic;
+using System.Collections;
 using System;
 
 public class BoardBehavior : MonoBehaviour
@@ -18,12 +19,17 @@ public class BoardBehavior : MonoBehaviour
     // Déclaration des valeurs maximales pour les dimensions du plateau.
     public int gridCubicDimension;
     // Récupère les coordonnées des cellules du plateau via Grid.
+    // Indique si le jeu attend la fin d'une animation avant de traiter la prochaine entrée.
+    private bool waiting = false;
+    // Récupérer la durée de l'animation depuis le prefab de la tuile.
+    private float animationDuration;
     void Awake()
     {
         grid = GetComponentInChildren<GridBehavior>();
         // Ajouter une première liste (ici de 16, qu'on peut agrandir à souhait si besoin un jour).
         tiles = new List<TileBehavior>(16);
         gridCubicDimension = grid.rows.Length;
+        animationDuration = tilePrefab.duration;
     }
 
     // Appelera deux fois CreateTile pour générer les deux premières Tiles.
@@ -36,33 +42,36 @@ public class BoardBehavior : MonoBehaviour
     // Gère les entrées clavier pour déplacer les tuiles sur le plateau.
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.UpArrow))
-        {
+        // Vérifie si le jeu est en attente d'une animation avant de traiter les entrées clavier. Si waiting est faux, le jeu écoute les entrées.
+        if (!waiting){
+            if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.UpArrow))
+            {
             // Déplacement vers le haut, commence à la première colonne et se balaye vers le bas.
             // Et se déplace vers le bas. De la première colonne jusqu'à la dernière.
             MoveTiles(Vector2Int.up, 0, 1, 1, 1); 
             Debug.Log("Up key pressed");
-        }
-        else if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow))
-        {
+            }
+            else if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow))
+            {
             // Déplacement vers la gauche, commence à la deuxième colonne (car la première est inutile, déjà à gauche).
             // Et se déplace vers la droite. De la première ligne jusqu'à la dernière.
             MoveTiles(Vector2Int.left, 1, 0, 1, 1);
             Debug.Log("Left key pressed");
-        }
-        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-        {
+            }
+            else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+            {
             // Déplacement vers le bas, commence à l'avant dernière ligne et balaye vers le haut.
             // En décrémentant les lignes.
             MoveTiles(Vector2Int.down, 0, gridCubicDimension - 2, 1, -1); 
             Debug.Log("Down key pressed");
-        }
-        else if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
+            }
+            else if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+            {
             // Déplacement vers la droite, commence à l'avant dernière colonne.
             // Et décrémente les colonnes avant de balayer toutes les cases normalement.
             MoveTiles(Vector2Int.right, gridCubicDimension - 2, 0, -1, 1); 
             Debug.Log("Right key pressed");
+            }
         }
     }
 
@@ -72,6 +81,8 @@ public class BoardBehavior : MonoBehaviour
     // Le sens est décissif pour déterminer l'ordre de parcours des cellules et éviter les collisions incorrectes, voir le cours.
     void MoveTiles(Vector2Int direction, int startX, int startY, int incrementX, int incrementY)
     {
+        // Ajout d'un booléen pour suivre si un mouvement a été effectué.
+        bool moved = false;
         // Mise en place d'un safety pour éviter les boucles infinies si les paramètres sont incorrects.
         const int MAX_SAFETY_COUNT = 30; // Limite pour éviter les boucles infinies
         int safetyCounter = 0; // Compteur pour éviter les boucles infinies
@@ -97,14 +108,19 @@ public class BoardBehavior : MonoBehaviour
                         // Nouvelle fonction propre aux déplacements individuels.
                         // Elle aura besoin de la cell et sa tuile pointée pour effectuer le déplacement correctement.
                         // Ainsi qu'une direction pour savoir dans quel sens déplacer la tuile.
-                        MoveTile(cell.tile, direction);
+                        moved |= MoveTile(cell.tile, direction);
                     }       
                 }
             }  
         }
+        // C'est une fois que tous les déplacements ont été effectués qu'on peut lancer l'animation.
+        // Le tout conditionné par le fait qu'un mouvement ait effectivement eu lieu, renvoyant "true" depuis MoveTile.
+        if (moved) {
+            StartCoroutine(WaitForAnimation());
+        }
     }
 
-    void MoveTile(TileBehavior tile, Vector2Int direction)
+    private bool MoveTile(TileBehavior tile, Vector2Int direction)
     {
         // Besoin d'avoir la case adjacente dans la direction spécifiée pour savoir où déplacer la tuile et si elle est libre.
         // Pour cela, pause ! C'est à Grid de s'en charger dans une fonction dédiée, par exemple GetAdjacentCell().
@@ -130,21 +146,14 @@ public class BoardBehavior : MonoBehaviour
             newCell = adjacentCell;
             // On met à jour la cellule adjacente pour initier un nouveau déplacement.      
             adjacentCell = grid.GetAdjacentCell(adjacentCell, direction); 
-
-            if (adjacentCell != null) {
-            Debug.Log("La cellule adjacente est là.");}
-            else {
-                Debug.Log("La cellule adjacente est nulle.");
-            }
-      
         }
        
         if(newCell != null) 
         {
             tile.MoveTo(newCell);
-            return;
+            return true;
         }  
-        return;
+        return false;
     } 
 
     // Instantie une nouvelle Tile Prefab sur une cellule vide aléatoire récupéré via Spawn() et GetRandomEmptyCell().
@@ -161,5 +170,21 @@ public class BoardBehavior : MonoBehaviour
         // La tuile est maintenant positionnée sur une cellule vide aléatoire du plateau 
         // Et associée à un état et à sa cellule.
         tile.Spawn(grid.GetRandomEmptyCell());
+    }
+
+    // Lance une coroutine pour attendre la fin de l'animation.
+    private IEnumerator WaitForAnimation()
+    {
+        // Remise à true de l'état d'attente pour indiquer que le jeu attend la fin de l'animation.
+        // A ce stade, les inputs clavier sont ignorés jusqu'à la fin de l'animation.
+        waiting = true;
+        // Attente de la durée de l'animation avant de reprendre le contrôle du jeu.
+        yield return new WaitForSeconds(animationDuration);
+        // Fin de l'attente, le jeu peut maintenant reprendre le traitement des entrées clavier.
+        waiting = false;
+
+        // A venir : 
+        // Creation des nouvelles tuiles après le mouvement.
+        // Gestion d'un game over éventuel.
     }
 }
