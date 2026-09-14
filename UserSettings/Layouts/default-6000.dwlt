@@ -611,7 +611,11 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 79
+=======
+    y: 24
+>>>>>>> Develop_Feature/Merging
     width: 217
     height: 565
   m_SerializedDataModeController:
@@ -637,6 +641,7 @@ MonoBehaviour:
       m_LastClickedID:
         m_rawData: 0
       m_ExpandedIDs:
+<<<<<<< HEAD
       - m_rawData: 568105589213755966
       - m_rawData: 568105584918842930
       - m_rawData: 568105584918842946
@@ -645,6 +650,11 @@ MonoBehaviour:
       - m_rawData: 568105584918843084
       - m_rawData: 568105584918843112
       - m_rawData: 568105584918843118
+=======
+      - m_rawData: 568105589213729426
+      - m_rawData: 568105589213729440
+      - m_rawData: 568105584918844552
+>>>>>>> Develop_Feature/Merging
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1298,7 +1308,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 484.51703, y: 317.48297, z: 0}
     speed: 2
-    m_Value: {x: 484.51703, y: 317.48297, z: 0}
+    m_Value: {x: 398.5, y: 483.5, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1351,7 +1361,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 50.898804
     speed: 2
-    m_Value: 50.898804
+    m_Value: 75.66042
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1408,8 +1418,13 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 218
     y: 79
+=======
+    x: 219
+    y: 24
+>>>>>>> Develop_Feature/Merging
     width: 1236
     height: 565
   m_SerializedDataModeController:
@@ -1571,7 +1586,11 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 670
+=======
+    y: 615
+>>>>>>> Develop_Feature/Merging
     width: 1455
     height: 316
   m_SerializedDataModeController:
@@ -1713,9 +1732,15 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
+<<<<<<< HEAD
     - m_rawData: 568105584918842186
     m_LastClickedEntityId:
       m_rawData: 568105584918842186
+=======
+    - m_rawData: 568105584918842730
+    m_LastClickedEntityId:
+      m_rawData: 568105584918842730
+>>>>>>> Develop_Feature/Merging
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_rawData: 568105584918836896
@@ -1817,8 +1842,13 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1456
     y: 79
+=======
+    x: 1457
+    y: 24
+>>>>>>> Develop_Feature/Merging
     width: 463
     height: 907
   m_SerializedDataModeController:
