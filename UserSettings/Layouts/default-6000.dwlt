@@ -274,8 +274,8 @@ MonoBehaviour:
     y: 0
     width: 464
     height: 933
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 43
+    y: 0
     width: 1920
     height: 36
   m_SerializedDataModeController:
@@ -611,11 +611,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 79
-=======
     y: 24
->>>>>>> Develop_Feature/Merging
     width: 217
     height: 565
   m_SerializedDataModeController:
@@ -636,12 +632,10 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs:
-      - m_rawData: 568105584918842186
+      m_SelectedIDs: []
       m_LastClickedID:
         m_rawData: 0
       m_ExpandedIDs:
-<<<<<<< HEAD
       - m_rawData: 568105589213755966
       - m_rawData: 568105584918842930
       - m_rawData: 568105584918842946
@@ -650,11 +644,6 @@ MonoBehaviour:
       - m_rawData: 568105584918843084
       - m_rawData: 568105584918843112
       - m_rawData: 568105584918843118
-=======
-      - m_rawData: 568105589213729426
-      - m_rawData: 568105589213729440
-      - m_rawData: 568105584918844552
->>>>>>> Develop_Feature/Merging
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1306,9 +1295,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 484.51703, y: 317.48297, z: 0}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 398.5, y: 483.5, z: 0}
+    m_Value: {x: 484.51703, y: 317.48297, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1359,9 +1348,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 50.898804
+    m_Target: 10
     speed: 2
-    m_Value: 75.66042
+    m_Value: 50.898804
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1418,13 +1407,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 218
-    y: 79
-=======
     x: 219
     y: 24
->>>>>>> Develop_Feature/Merging
     width: 1236
     height: 565
   m_SerializedDataModeController:
@@ -1586,11 +1570,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 670
-=======
     y: 615
->>>>>>> Develop_Feature/Merging
     width: 1455
     height: 316
   m_SerializedDataModeController:
@@ -1642,22 +1622,20 @@ MonoBehaviour:
     m_LastClickedID:
       m_rawData: 568105584918843550
     m_ExpandedIDs:
-    - m_rawData: 568105589213755562
     - m_rawData: 0
-    - m_rawData: 568105584918843234
-    - m_rawData: 568105584918843236
-    - m_rawData: 568105584918843238
-    - m_rawData: 568105584918843240
-    - m_rawData: 568105584918843242
-    - m_rawData: 568105584918843244
-    - m_rawData: 568105584918843246
-    - m_rawData: 568105584918843248
-    - m_rawData: 568105584918843250
-    - m_rawData: 568105584918843252
-    - m_rawData: 568105584918843254
-    - m_rawData: 568105584918843256
-    - m_rawData: 568105584918843258
-    - m_rawData: 568105587066273791
+    - m_rawData: 568105584918843288
+    - m_rawData: 568105584918843290
+    - m_rawData: 568105584918843292
+    - m_rawData: 568105584918843294
+    - m_rawData: 568105584918843296
+    - m_rawData: 568105584918843298
+    - m_rawData: 568105584918843300
+    - m_rawData: 568105584918843302
+    - m_rawData: 568105584918843304
+    - m_rawData: 568105584918843306
+    - m_rawData: 568105584918843308
+    - m_rawData: 568105584918843310
+    - m_rawData: 568105584918843312
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1691,19 +1669,19 @@ MonoBehaviour:
       m_rawData: 0
     m_ExpandedIDs:
     - m_rawData: 0
-    - m_rawData: 568105584918843234
-    - m_rawData: 568105584918843236
-    - m_rawData: 568105584918843238
-    - m_rawData: 568105584918843240
-    - m_rawData: 568105584918843242
-    - m_rawData: 568105584918843244
-    - m_rawData: 568105584918843246
-    - m_rawData: 568105584918843248
-    - m_rawData: 568105584918843250
-    - m_rawData: 568105584918843252
-    - m_rawData: 568105584918843254
-    - m_rawData: 568105584918843256
-    - m_rawData: 568105584918843258
+    - m_rawData: 568105584918843288
+    - m_rawData: 568105584918843290
+    - m_rawData: 568105584918843292
+    - m_rawData: 568105584918843294
+    - m_rawData: 568105584918843296
+    - m_rawData: 568105584918843298
+    - m_rawData: 568105584918843300
+    - m_rawData: 568105584918843302
+    - m_rawData: 568105584918843304
+    - m_rawData: 568105584918843306
+    - m_rawData: 568105584918843308
+    - m_rawData: 568105584918843310
+    - m_rawData: 568105584918843312
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1732,15 +1710,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-<<<<<<< HEAD
     - m_rawData: 568105584918842186
     m_LastClickedEntityId:
       m_rawData: 568105584918842186
-=======
-    - m_rawData: 568105584918842730
-    m_LastClickedEntityId:
-      m_rawData: 568105584918842730
->>>>>>> Develop_Feature/Merging
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_rawData: 568105584918836896
@@ -1749,8 +1721,8 @@ MonoBehaviour:
     - m_rawData: 568105584918843148
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 65536
-      m_OriginalName: 65536
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
@@ -1758,10 +1730,10 @@ MonoBehaviour:
         width: 0
         height: 0
       m_UserData:
-        m_rawData: 568105584918841924
+        m_rawData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
       m_ClientGUIView: {fileID: 10}
@@ -1820,7 +1792,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_LastSelectedObjectID:
-    m_rawData: 568105584918842186
+    m_rawData: 0
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1842,13 +1814,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 1456
-    y: 79
-=======
     x: 1457
     y: 24
->>>>>>> Develop_Feature/Merging
     width: 463
     height: 907
   m_SerializedDataModeController:
