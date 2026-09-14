@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 174f6bfacb32f1b4cbbf40eaebecc82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileBehavior
-  duration: 0.1
+  duration: 0.085
 --- !u!1 &7399231957165193155
 GameObject:
   m_ObjectHideFlags: 0
