@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: 131072
   m_EditorClassIdentifier: Assembly-CSharp::TileStates
   backgroundColor: {r: 0.61090684, g: 0, b: 1, a: 1}
-  textColor: {r: 0, g: 0, b: 0, a: 1}
+  textColor: {r: 0.8962264, g: 0.83281416, b: 0.85617656, a: 1}
