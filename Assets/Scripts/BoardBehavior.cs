@@ -49,28 +49,24 @@ public class BoardBehavior : MonoBehaviour
             // Déplacement vers le haut, commence à la première colonne et se balaye vers le bas.
             // Et se déplace vers le bas. De la première colonne jusqu'à la dernière.
             MoveTiles(Vector2Int.up, 0, 1, 1, 1); 
-            Debug.Log("Up key pressed");
             }
             else if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
             // Déplacement vers la gauche, commence à la deuxième colonne (car la première est inutile, déjà à gauche).
             // Et se déplace vers la droite. De la première ligne jusqu'à la dernière.
             MoveTiles(Vector2Int.left, 1, 0, 1, 1);
-            Debug.Log("Left key pressed");
             }
             else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
             // Déplacement vers le bas, commence à l'avant dernière ligne et balaye vers le haut.
             // En décrémentant les lignes.
             MoveTiles(Vector2Int.down, 0, gridCubicDimension - 2, 1, -1); 
-            Debug.Log("Down key pressed");
             }
             else if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
             // Déplacement vers la droite, commence à l'avant dernière colonne.
             // Et décrémente les colonnes avant de balayer toutes les cases normalement.
             MoveTiles(Vector2Int.right, gridCubicDimension - 2, 0, -1, 1); 
-            Debug.Log("Right key pressed");
             }
         }
     }
@@ -139,7 +135,11 @@ public class BoardBehavior : MonoBehaviour
             safetyCounter++;
             if(adjacentCell.occupied)
             {
-                // Prévoir le merge.
+                // Si la fonction CanMerge renvoie un "true" avec les tuiles concernées, on peut procéder à la fusion.
+                if (CanMerge(tile, adjacentCell.tile))
+                {
+                    MergeTiles(tile, adjacentCell.tile);
+                }
                 break; // Ne pas oublier de casser la boucle à ce moment là.
             }
             // Sinon la cellule adjacente est libre, on peut déplacer la tuile.
@@ -172,6 +172,33 @@ public class BoardBehavior : MonoBehaviour
         tile.Spawn(grid.GetRandomEmptyCell());
     }
 
+    // Va return true si les deux tuiles peuvent fusionner, false sinon.
+    private bool CanMerge(TileBehavior a, TileBehavior b)
+    {
+        // Tout simplement.
+        return a.score == b.score;
+    }
+
+    private void MergeTiles(TileBehavior a, TileBehavior b)
+    {
+        // Destruction de la tuile dans le tableau des tuiles.
+        tiles.Remove(a);
+        // Appel de la méthode MergeTo sur la tuile à fusionner vers la CELLULE cible, ce qui permettra d'ajouter une animation.
+        a.MergeTo(b.cell);
+        // Récupération de l'index de l'état actuel de la tuile à fusionner.
+        int bNewIndex = b.IndexOf(b.state)+1;
+        Debug.Log("Retour de l'index est : " + b.IndexOf(b.state));
+        Debug.Log("Merging tile with new index: " + bNewIndex);
+
+        // Modification du score.
+        int newScore = b.score*2;
+        Debug.Log("New score for merged tile: " + newScore);
+
+        // Mise à jour de l'état de la tuile cible avec le nouvel état et score.
+        b.SetState(b.TileStates[bNewIndex], newScore);
+        Debug.Log("Updated target tile state to index: " + bNewIndex + " with score: " + newScore);
+    }
+
     // Lance une coroutine pour attendre la fin de l'animation.
     private IEnumerator WaitForAnimation()
     {
@@ -183,8 +210,11 @@ public class BoardBehavior : MonoBehaviour
         // Fin de l'attente, le jeu peut maintenant reprendre le traitement des entrées clavier.
         waiting = false;
 
-        // A venir : 
-        // Creation des nouvelles tuiles après le mouvement.
+        // Creation des nouvelles tuiles après le mouvement si le plateau n'est pas plein.
+        if (tiles.Count != tiles.Capacity)
+        {
+            CreateTile();
+        }
         // Gestion d'un game over éventuel.
     }
 }

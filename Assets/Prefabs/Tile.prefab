@@ -89,6 +89,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 174f6bfacb32f1b4cbbf40eaebecc82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileBehavior
+  TileStates:
+  - {fileID: 11400000, guid: 6cbfb9442c1ad2442bc08a9d77f506d8, type: 2}
+  - {fileID: 11400000, guid: e772b3f1b00beb54a82708d35c456786, type: 2}
+  - {fileID: 11400000, guid: f47c53f988c510c40b29eb0c84179db9, type: 2}
+  - {fileID: 11400000, guid: f80309218a3bf584e820fe3b531b7108, type: 2}
+  - {fileID: 11400000, guid: 286569bad9beeb94c87d23fed6839cef, type: 2}
+  - {fileID: 11400000, guid: 09d5ab2baabda294d94e0b479af32196, type: 2}
+  - {fileID: 11400000, guid: 94ace013670339f4f93949f97424f166, type: 2}
+  - {fileID: 11400000, guid: 8d1d42c4025441e48a7675e267d456da, type: 2}
+  - {fileID: 11400000, guid: 22cd3073a23e6c446935f308509900c3, type: 2}
+  - {fileID: 11400000, guid: fa6d3dea865c4ed418caa58b9c64f633, type: 2}
+  - {fileID: 11400000, guid: 0b5299140b206b44c839044dcbd4573f, type: 2}
+  - {fileID: 11400000, guid: 4e3b07daa467c4c429d0648548420314, type: 2}
+  - {fileID: 11400000, guid: 11df35868fffbaf498411186a25a7608, type: 2}
+  - {fileID: 11400000, guid: 581a115769de40e489ed299b3bbad308, type: 2}
+  - {fileID: 11400000, guid: 7f83ebe274f0b9644b7e5f95faf81224, type: 2}
+  - {fileID: 11400000, guid: af5d8a5ca119a5b49afc30c99a82960c, type: 2}
+  - {fileID: 11400000, guid: 6c8957e72db634444aa7eba26bbf5d3c, type: 2}
   duration: 0.085
 --- !u!1 &7399231957165193155
 GameObject:

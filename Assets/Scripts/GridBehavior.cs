@@ -26,8 +26,6 @@ public class GridBehavior : MonoBehaviour
             {
                 // Assigner les coordonnées (x, y), y en fonction du Row actuel et x en fonction de la position dans la row.
                 rows[y].cells[x].coordinates = new Vector2Int(x, y);
-                // Ca, c'est nickel.
-                // Debug.Log("Setting coordinates for cell at index " + x + " in row " + y);
             }
         }
         
@@ -38,11 +36,9 @@ public class GridBehavior : MonoBehaviour
     // Déclaration eponyme pour la syntaxe même si on renverra null ou cells[x,y];
     public CellBehavior GetRandomEmptyCell()
     {
-        Debug.Log("Let's try GetRandomEmptyCell");
         // Partir d'un index aléatoire dans le tableau.
         int index = Random.Range(0, cells.Length);
         // C'est quoi l'index qu'il a choisi ? C'est bien aléatoire ! :thumbsup:
-        // Debug.Log("Random starting index: " + index);
         // Mémoriser le point de départ pour s'assurer d'avoir parcouru toutes les cellules au maximum une fois.
         int startingIndex = index;
         // Tant que la cellule actuelle est occupée, [...]

@@ -11,10 +11,12 @@ public class TileBehavior : MonoBehaviour
     // Variables à utiliser : 
     // Représente l'état actuel de la tuile dans une variable de type TileState.
     public TileStates state { get; private set; }
+    // Tableau contenant tous les états possibles d'une tuile.
+    public TileStates[] TileStates;
     // Représente la cellule à laquelle cette tuile est a rattacher.
     public CellBehavior cell { get; private set; }
     // Le score de la tuile qu'on implantera automatiquement.
-    private int score { get; set; }
+    public int score { get; set; }
     // Référence au composant TextMeshPro pour afficher le score de la tuile.
     private TextMeshProUGUI text;
     // Référence au composant Image pour afficher le fond de la tuile.
@@ -28,7 +30,7 @@ public class TileBehavior : MonoBehaviour
     {
         backgroundImage = GetComponent<Image>();
         text = GetComponentInChildren<TextMeshProUGUI>();
-    }
+       }
 
     // Applique le statut donné par un parent.
     // L'état du pion est configuré ici.
@@ -81,6 +83,38 @@ public class TileBehavior : MonoBehaviour
             this.cell.tile = this;
         }
         StartCoroutine(Animate(cell.transform.position));
+    }
+
+    // Fonction pour gérer la fusion d'une tuile vers une cellule cible.
+    public void MergeTo(CellBehavior cell)
+    {
+        // Similaire à MoveTo(), mais après l'animation, la tuile sera détruite.
+        if (this.cell != null) // Si nous recevons bien une cellule.
+        {
+            this.cell.tile = null; // Le pointeur vers la tuile est libéré.
+        }
+        this.cell = null;
+        // Lancer l'animation de notre tuile actuellement en cours vers la cellule cible.
+        StartCoroutine(Animate(cell.transform.position));
+        // Après l'animation, la tuile sera détruite car nous sommes encore en train de fusionner.
+        Destroy(gameObject, duration);
+    }
+
+    // Récupération de l'index de l'état actuel de la tuile.
+    public int IndexOf(TileStates state)
+    {
+        Debug.Log("TileStates.Length: " + TileStates.Length);
+        // Parcourir le tableau des états de la tuile.
+        for (int i = 0; i < TileStates.Length; i++)
+        {
+            Debug.Log("Checking TileStates at index " + i + ": " + TileStates[i]);
+            // Pour trouver l'index correspondant à l'état actuel et le retourner.
+            if (TileStates[i] == state)
+            {
+                return i;
+            }
+        }
+        return -1; // Retourne -1 si l'état actuel n'est pas trouvé, ce qui n'est pas normal.
     }
 
     // Un IEnumerator est un type utilisé pour les coroutines dans Unity, permettant d'animer des objets sur plusieurs frames.
