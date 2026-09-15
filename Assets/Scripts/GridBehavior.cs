@@ -4,10 +4,10 @@ using System.Collections;
 
 public class GridBehavior : MonoBehaviour
 {
-    // Ici, les tableaux ne seront pas reconnus car
+    // Références vers les lignes et les cellules du plateau.
     public RowBehavior[] rows;
     public CellBehavior[] cells;
-     // Regroupe les Rows et les Cells dans deux tableaux.
+
     void Awake()
     {
         // Regroupe les Rows et les Cells dans les tableaux privés.
@@ -96,5 +96,23 @@ public class GridBehavior : MonoBehaviour
         // Inverser la direction sur l'axe Y pour correspondre à la logique du plateau.
         coordinates.y -= direction.y;
         return GetCell(new Vector2Int(coordinates.x, coordinates.y));
+    }
+
+    public int GetOccupiedTileCount()
+    {
+        int count = 0;
+
+        foreach (var row in rows)
+        {
+            foreach (var cell in row.cells)
+            {
+                if (cell.occupied)
+                {
+                    count++;
+                }
+            }
+        }
+
+        return count;
     }
 }

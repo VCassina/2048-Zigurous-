@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\CellBehavior.cs" />
     <Compile Include="Assets\Scripts\GridBehavior.cs" />
     <Compile Include="Assets\Scripts\TileStates.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

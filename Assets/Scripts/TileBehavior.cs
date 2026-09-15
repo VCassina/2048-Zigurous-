@@ -103,11 +103,9 @@ public class TileBehavior : MonoBehaviour
     // Récupération de l'index de l'état actuel de la tuile.
     public int IndexOf(TileStates state)
     {
-        Debug.Log("TileStates.Length: " + TileStates.Length);
         // Parcourir le tableau des états de la tuile.
         for (int i = 0; i < TileStates.Length; i++)
         {
-            Debug.Log("Checking TileStates at index " + i + ": " + TileStates[i]);
             // Pour trouver l'index correspondant à l'état actuel et le retourner.
             if (TileStates[i] == state)
             {
