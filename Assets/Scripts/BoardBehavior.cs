@@ -36,13 +36,6 @@ public class BoardBehavior : MonoBehaviour
         animationDuration = tilePrefab.duration;     
     }
 
-    // Appelera deux fois CreateTile pour générer les deux premières Tiles.
-    void Start()
-    {
-        CreateTile();
-        CreateTile();
-    }
-
     // Gère les entrées clavier pour déplacer les tuiles sur le plateau.
     void Update()
     {
@@ -161,7 +154,7 @@ public class BoardBehavior : MonoBehaviour
     } 
 
     // Instantie une nouvelle Tile Prefab sur une cellule vide aléatoire récupéré via Spawn() et GetRandomEmptyCell().
-    private void CreateTile()
+    public void CreateTile()
     {
         // Instancier une tuile, et lui donne une position dans la hiérarchie du Grid, 
         // Ce dernier s'occupera de gérer la position.
