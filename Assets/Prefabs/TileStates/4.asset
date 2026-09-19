@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43886167e0a16324ba4d14c0d84e668c, type: 3}
   m_Name: 4
   m_EditorClassIdentifier: Assembly-CSharp::TileStates
-  backgroundColor: {r: 0.48492348, g: 1, b: 0, a: 1}
-  textColor: {r: 0, g: 0, b: 0, a: 1}
+  backgroundColor: {r: 0.4433962, g: 0.035555363, b: 0.18581253, a: 1}
+  textColor: {r: 0.8962264, g: 0.83281416, b: 0.85617656, a: 1}

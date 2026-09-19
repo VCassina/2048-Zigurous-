@@ -3,13 +3,14 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using System;
+using UnityEngine.Tilemaps;
 
 public class BoardBehavior : MonoBehaviour
 {
     // Référence au composant Grid attaché au même GameObject.
     public GridBehavior grid;
     // Liste dynamique des tuiles présentes sur le plateau.
-    private List<TileBehavior> tiles;
+    public List<TileBehavior> tiles;
     // Référence au prefab de la tuile à instancier.
     // A ajouter dans l'inspecteur.
     public TileBehavior tilePrefab;
@@ -23,20 +24,16 @@ public class BoardBehavior : MonoBehaviour
     private bool waiting = false;
     // Récupérer la durée de l'animation depuis le prefab de la tuile.
     private float animationDuration;
+    // Référence au GameManager pour gérer la fin du jeu.
+    public GameManager gameManager;
+    
     void Awake()
     {
         grid = GetComponentInChildren<GridBehavior>();
         // Ajouter une première liste (ici de 16, qu'on peut agrandir à souhait si besoin un jour).
         tiles = new List<TileBehavior>(16);
         gridCubicDimension = grid.rows.Length;
-        animationDuration = tilePrefab.duration;
-    }
-
-    // Appelera deux fois CreateTile pour générer les deux premières Tiles.
-    void Start()
-    {
-        CreateTile();
-        CreateTile();
+        animationDuration = tilePrefab.duration;     
     }
 
     // Gère les entrées clavier pour déplacer les tuiles sur le plateau.
@@ -157,7 +154,7 @@ public class BoardBehavior : MonoBehaviour
     } 
 
     // Instantie une nouvelle Tile Prefab sur une cellule vide aléatoire récupéré via Spawn() et GetRandomEmptyCell().
-    private void CreateTile()
+    public void CreateTile()
     {
         // Instancier une tuile, et lui donne une position dans la hiérarchie du Grid, 
         // Ce dernier s'occupera de gérer la position.
@@ -169,14 +166,22 @@ public class BoardBehavior : MonoBehaviour
         // Transmettant la résultat de la méthode GetRandomEmptyCell(), à savoir une cellule vide aléatoire.
         // La tuile est maintenant positionnée sur une cellule vide aléatoire du plateau 
         // Et associée à un état et à sa cellule.
-        tile.Spawn(grid.GetRandomEmptyCell());
+        CellBehavior emptyCell = grid.GetRandomEmptyCell();
+
+        if (emptyCell == null)
+        {
+            Destroy(tile.gameObject);
+            return;
+        }
+
+        tile.Spawn(emptyCell);
+        tiles.Add(tile);
     }
 
     // Va return true si les deux tuiles peuvent fusionner, false sinon.
     private bool CanMerge(TileBehavior a, TileBehavior b)
     {
-        // Tout simplement.
-        return a.score == b.score;
+        return a != null && b != null && a.score == b.score;
     }
 
     private void MergeTiles(TileBehavior a, TileBehavior b)
@@ -187,16 +192,13 @@ public class BoardBehavior : MonoBehaviour
         a.MergeTo(b.cell);
         // Récupération de l'index de l'état actuel de la tuile à fusionner.
         int bNewIndex = b.IndexOf(b.state)+1;
-        Debug.Log("Retour de l'index est : " + b.IndexOf(b.state));
-        Debug.Log("Merging tile with new index: " + bNewIndex);
 
         // Modification du score.
         int newScore = b.score*2;
-        Debug.Log("New score for merged tile: " + newScore);
 
         // Mise à jour de l'état de la tuile cible avec le nouvel état et score.
         b.SetState(b.TileStates[bNewIndex], newScore);
-        Debug.Log("Updated target tile state to index: " + bNewIndex + " with score: " + newScore);
+        gameManager.IncreaseScore(newScore); // Modification du scoring actuel.
     }
 
     // Lance une coroutine pour attendre la fin de l'animation.
@@ -211,10 +213,80 @@ public class BoardBehavior : MonoBehaviour
         waiting = false;
 
         // Creation des nouvelles tuiles après le mouvement si le plateau n'est pas plein.
-        if (tiles.Count != tiles.Capacity)
+        if (tiles.Count < grid.cells.Length)
         {
             CreateTile();
+            Debug.Log("Created a new tile.");
+            Debug.Log("Grid occupied cells: " + grid.GetOccupiedTileCount());
+            Debug.Log("tiles.Count is :" + tiles.Count);
         }
         // Gestion d'un game over éventuel.
+        if (CheckForGameOver())
+        {
+            Debug.Log("Game Over!");
+            gameManager.GameOver();
+        }
+        else if (CheckForGameOver() == false)
+        {
+            Debug.Log("Game NOT over!");
+        }
+    }
+
+    // Vider le plateau.
+    public void ClearBoard()
+    {
+        // Vider les références des cellules aux tuiles.
+        foreach (var cell in grid.cells)
+        {
+            cell.tile = null;
+        }
+        foreach (TileBehavior tile in tiles)
+        {
+            // Destruction des tuiles restantes.
+            Destroy(tile.gameObject);
+        }
+        // Vider la liste des tuiles.
+        tiles.Clear(); 
+    }
+
+    // Vérifie si le jeu est terminé.
+    public bool CheckForGameOver()
+    {
+        // Tant que les tuiles ne sont pas égales au nombre de cellules, le jeu n'est pas terminé.
+        int occupiedTileCount = grid.GetOccupiedTileCount();
+
+        if (occupiedTileCount < grid.cells.Length)
+        {
+            Debug.Log("Board is not full, game not over.");
+            Debug.Log("Occupied tiles: " + occupiedTileCount + ", Grid cells count: " + grid.cells.Length);
+            return false; // Le plateau n'est pas plein, donc le jeu n'est pas terminé.
+        }
+
+        // Il faut maintenant vérifier chaque cellule occupée directement depuis les cellules du plateau.
+        foreach (var cell in grid.cells)
+        {
+            TileBehavior tile = cell.tile;
+
+            if (tile == null)
+            {
+                continue;
+            }
+
+            CellBehavior up = grid.GetAdjacentCell(cell, Vector2Int.up);
+            CellBehavior down = grid.GetAdjacentCell(cell, Vector2Int.down);
+            CellBehavior left = grid.GetAdjacentCell(cell, Vector2Int.left);
+            CellBehavior right = grid.GetAdjacentCell(cell, Vector2Int.right);
+            // Et on vérifie si une fusion est possible avec l'une de ses voisines fraichement récupérées.
+            if (up != null && CanMerge(tile, up.tile) || down != null && CanMerge(tile, down.tile) || 
+            left != null && CanMerge(tile, left.tile) || right != null && CanMerge(tile, right.tile))
+            {
+                // Une fusion est possible, donc le jeu n'est pas terminé.
+                Debug.Log("Merge possible, game not over.");
+                Debug.Log("Because tile at " + tile.cell.transform.position + " can merge with a neighbor.");
+                return false;
+            }
+        }
+        // Aucune des conditions précédentes n'a été remplie, ainsi aucune fusion n'est possible sur le tableau plein et le jeu est donc terminé.
+        return true;
     }
 }
