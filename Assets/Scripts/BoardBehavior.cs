@@ -198,6 +198,7 @@ public class BoardBehavior : MonoBehaviour
 
         // Mise à jour de l'état de la tuile cible avec le nouvel état et score.
         b.SetState(b.TileStates[bNewIndex], newScore);
+        gameManager.IncreaseScore(newScore); // Modification du scoring actuel.
     }
 
     // Lance une coroutine pour attendre la fin de l'animation.
