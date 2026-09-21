@@ -9,11 +9,17 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private CanvasGroup gameOver;
     public TextMeshProUGUI bestScore;
+    public TextMeshProUGUI bestChrono;
     public TextMeshProUGUI currentScore;
     public int score;
     private float chrono;
     [SerializeField]
     private TextMeshProUGUI currentChrono;
+    // Timer de la dernière partie (pour gérer la réinitialisation).
+    private float lastRunTimer;
+    // Référence au TimerBehavior pour accéder au chrono actuel.
+    [SerializeField]
+    private TimerBehavior timer;
 
     public void Start()
     {
@@ -24,47 +30,53 @@ public class GameManager : MonoBehaviour
     {
         gameOver.alpha = 0f; // On voit plus l’écran de GameOver si jamais on le voyait.
         gameOver.interactable = false; // Ne peut plus recevoir d’input.
-
+        SaveBestScores();
         board.ClearBoard(); // On nettoie tout.
         board.CreateTile(); // Création de nos deux tiles en passant par board qu’on a importé.
         board.CreateTile();
         board.enabled = true; // Et oui, va falloir mettre enabled, on va désactiver la board en cas de game over, donc là on s’assure de le remettre.
         SetScore(0); // On réinitialise le score au début d'une nouvelle partie.
-        bestScore.text = LoadBestScores().ToString(); // On met à jour l'affichage du meilleur score.
+        bestScore.text = LoadBestScores().score.ToString(); // On met à jour l'affichage du meilleur score.
+        // Et de son chrono en cuttant aprés 3 décimales : 
+        bestChrono.text = LoadBestScores().time.ToString("F2"); // On met à jour l'affichage du meilleur chrono en coupant après 3 décimales.
         SetChrono(0f); // On réinitialise le chrono au début d'une nouvelle partie.
         board.isNewGamePaused = true; // On met le jeu en pause de début pour la nouvelle partie.
+        lastRunTimer = 0f; // On réinitialise le timer de la dernière partie.
     }
 
     public void GameOver()
     {
         board.enabled = false; // Board n'est plus clickable.
-        Debug.Log("Game Over DEPUIS GameOver() !");
         board.enabled = false; // On désactive le board pour arreter les inputs, déjà.
         gameOver.interactable = true;  // On rend intarissable l’écran de GameOver qui a toujours été là mais était en alpha 0, ce qu’on change avec la Coroutine qui vient : 
         StartCoroutine(Fade(gameOver, 1f, 1f)); // Animation d’apparition de l’écran objet tout juste ajouté.
         board.isNewGamePaused = true; // On met le jeu en pause de début lors du Game Over.
+        SaveBestScores(); // On sauvegarde le meilleur score à la fin de la partie.
     }
 
     private void SetScore(int newScore)
     {
         score = newScore; // On met à jour le score avec la nouvelle valeur.
         currentScore.text = score.ToString(); // On met à jour l'affichage du score actuel.
-        SaveBestScores();
     }
 
     private void SaveBestScores()
     {
-        int bestScore = LoadBestScores();
+        int bestScore = LoadBestScores().score;
         if (score > bestScore) // Si le score actuel est supérieur au meilleur score enregistré,
         {
-            bestScore = score;
-            PlayerPrefs.SetInt("BestScore", bestScore); // On l'enregistre dans les PlayerPrefs.
+            ScoreData currentScoreData = new ScoreData(); // Nouvelle instance de ScoreData pour stocker les informations de score.
+            currentScoreData.score = score; // On met à jour le meilleur score dans l'objet ScoreData.
+            currentScoreData.time = timer.chrono;
+            PlayerPrefs.SetString("ScoreData", JsonUtility.ToJson(currentScoreData)); // On l'enregistre dans les PlayerPrefs.
+            Debug.Log("Saved ScoreData: " + JsonUtility.ToJson(currentScoreData));
         }
     }
 
-    private int LoadBestScores()
+    private ScoreData LoadBestScores()
     {
-        return PlayerPrefs.GetInt("BestScore", 0); // On retourne le meilleur score enregistré, ou 0 s'il n'y en a pas.
+        return JsonUtility.FromJson<ScoreData>(PlayerPrefs.GetString("ScoreData", JsonUtility.ToJson(new ScoreData()))); 
+        // On retourne le meilleur score enregistré sous format ScoreData.
     }
 
     public void IncreaseScore(int amount) // La fonction appelée par Board.cs pour augmenter le score du joueur.
@@ -75,9 +87,21 @@ public class GameManager : MonoBehaviour
     public void SetChrono(float newChrono)
     {
         chrono = newChrono; // On met à jour le chrono avec la nouvelle valeur.
-        currentChrono.text = chrono.ToString("F2"); // On met à jour l'affichage du chrono actuel.
+        currentChrono.text = chrono.ToString("F2"); // On met à jour l'affichage du chrono actuel avec 2 décimales.
     }
 
+    // Premier outil de développement, ici pour supprimer les informations stockées dans PlayerPrefs.
+    public void ClearPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+        Debug.Log("PlayerPrefs deleted !");
+    }
+
+    // Deuxieme outil pour afficher en Debug.Log ce qu'on obtiendra dans LoadBestScores().
+    public void ShowLoadBestScores()
+    {
+        Debug.Log("Datas are : " + LoadBestScores().score + " - " + LoadBestScores().time);
+    }
     // Même logique que pour l’apparition, mais ici concernant l'alpha.
     private IEnumerator Fade(CanvasGroup canvasGroup, float targetAlpha, float duration)
     {
@@ -91,4 +115,13 @@ public class GameManager : MonoBehaviour
         }
         canvasGroup.alpha = targetAlpha;
     }
+
+    // Nouvelle classe pour stocker les informations de score.
+    [System.Serializable]
+    public class ScoreData
+    {
+        public int score;
+        public float time;
+    }
 }
+

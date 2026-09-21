@@ -89,7 +89,6 @@ public class BoardBehavior : MonoBehaviour
             safetyCounter++;
             if (safetyCounter > MAX_SAFETY_COUNT)
             {
-                Debug.LogError("Safety limit reached in MoveTiles loop. Check your loop parameters.");
                 break;
             }
             {
@@ -220,19 +219,14 @@ public class BoardBehavior : MonoBehaviour
         if (tiles.Count < grid.cells.Length)
         {
             CreateTile();
-            Debug.Log("Created a new tile.");
-            Debug.Log("Grid occupied cells: " + grid.GetOccupiedTileCount());
-            Debug.Log("tiles.Count is :" + tiles.Count);
         }
         // Gestion d'un game over éventuel.
         if (CheckForGameOver())
         {
-            Debug.Log("Game Over!");
             gameManager.GameOver();
         }
         else if (CheckForGameOver() == false)
         {
-            Debug.Log("Game NOT over!");
         }
     }
 
@@ -261,8 +255,6 @@ public class BoardBehavior : MonoBehaviour
 
         if (occupiedTileCount < grid.cells.Length)
         {
-            Debug.Log("Board is not full, game not over.");
-            Debug.Log("Occupied tiles: " + occupiedTileCount + ", Grid cells count: " + grid.cells.Length);
             return false; // Le plateau n'est pas plein, donc le jeu n'est pas terminé.
         }
 
@@ -285,8 +277,6 @@ public class BoardBehavior : MonoBehaviour
             left != null && CanMerge(tile, left.tile) || right != null && CanMerge(tile, right.tile))
             {
                 // Une fusion est possible, donc le jeu n'est pas terminé.
-                Debug.Log("Merge possible, game not over.");
-                Debug.Log("Because tile at " + tile.cell.transform.position + " can merge with a neighbor.");
                 return false;
             }
         }
