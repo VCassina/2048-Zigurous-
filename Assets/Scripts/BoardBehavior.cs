@@ -26,9 +26,11 @@ public class BoardBehavior : MonoBehaviour
     private float animationDuration;
     // Référence au GameManager pour gérer la fin du jeu.
     public GameManager gameManager;
+    public bool isNewGamePaused;
     
     void Awake()
     {
+        isNewGamePaused = true;
         grid = GetComponentInChildren<GridBehavior>();
         // Ajouter une première liste (ici de 16, qu'on peut agrandir à souhait si besoin un jour).
         tiles = new List<TileBehavior>(16);
@@ -74,6 +76,8 @@ public class BoardBehavior : MonoBehaviour
     // Le sens est décissif pour déterminer l'ordre de parcours des cellules et éviter les collisions incorrectes, voir le cours.
     void MoveTiles(Vector2Int direction, int startX, int startY, int incrementX, int incrementY)
     {
+        // Le jeu n'est plus en pause de début dès le premier mouvement : 
+        isNewGamePaused = false;
         // Ajout d'un booléen pour suivre si un mouvement a été effectué.
         bool moved = false;
         // Mise en place d'un safety pour éviter les boucles infinies si les paramètres sont incorrects.
