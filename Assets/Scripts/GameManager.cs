@@ -37,8 +37,14 @@ public class GameManager : MonoBehaviour
         board.enabled = true; // Et oui, va falloir mettre enabled, on va désactiver la board en cas de game over, donc là on s’assure de le remettre.
         SetScore(0); // On réinitialise le score au début d'une nouvelle partie.
         bestScore.text = LoadBestScores().score.ToString(); // On met à jour l'affichage du meilleur score.
-        // Et de son chrono en cuttant aprés 3 décimales : 
-        bestChrono.text = LoadBestScores().time.ToString("F2"); // On met à jour l'affichage du meilleur chrono en coupant après 3 décimales.
+
+        // Et de son chrono en cuttant aprés 3 décimales en adaptant au format mm:ss : 
+        float bestTime = LoadBestScores().time; // On récupère le meilleur chrono enregistré.
+        int minutes = (int)(bestTime / 60);
+        int secondes = (int)(bestTime % 60);
+        // Application à l'affichage du meilleur chrono dans l'objet correspondant.
+        bestChrono.text = $"{minutes:D2}:{secondes:D2}";
+
         SetChrono(0f); // On réinitialise le chrono au début d'une nouvelle partie.
         board.isNewGamePaused = true; // On met le jeu en pause de début pour la nouvelle partie.
         lastRunTimer = 0f; // On réinitialise le timer de la dernière partie.
@@ -86,8 +92,12 @@ public class GameManager : MonoBehaviour
 
     public void SetChrono(float newChrono)
     {
-        chrono = newChrono; // On met à jour le chrono avec la nouvelle valeur.
-        currentChrono.text = chrono.ToString("F2"); // On met à jour l'affichage du chrono actuel avec 2 décimales.
+        chrono = newChrono;
+        // Convertir les secondes en minutes et secondes
+        int minutes = (int)(chrono / 60);
+        int secondes = (int)(chrono % 60);
+        // Afficher au format "mm:ss" avec deux chiffres pour les minutes et les secondes
+        currentChrono.text = $"{minutes:D2}:{secondes:D2}";
     }
 
     // Premier outil de développement, ici pour supprimer les informations stockées dans PlayerPrefs.
