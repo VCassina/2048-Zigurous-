@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class GameManager : MonoBehaviour
     public BoardBehavior board;
     [SerializeField]
     private CanvasGroup gameOver;
+    [SerializeField]
+    private CanvasGroup scoreboard;
     public TextMeshProUGUI bestScore;
     public TextMeshProUGUI bestChrono;
     public TextMeshProUGUI currentScore;
@@ -20,21 +23,43 @@ public class GameManager : MonoBehaviour
     // Référence au TimerBehavior pour accéder au chrono actuel.
     [SerializeField]
     private TimerBehavior timer;
+    [SerializeField]
+    private CanvasGroup sideHUD;
+    [SerializeField]
+    private GameObject sideHUDReturn;
+       [SerializeField]
+    private GameObject sideHUDBestTries;
+
 
     public void Start()
     {
         NewGame();
     }
 
+    private void HideCanvasElements(CanvasGroup canvasGroup)
+    {
+        board.enabled = true; // On désactive temporairement la board pendant le fade.
+        canvasGroup.alpha = 0f; // On masque l'élément du canvas.
+        canvasGroup.blocksRaycasts = false; // Il ne peut plus recevoir d’input.
+        canvasGroup.interactable = false; // On s'assure qu'il n'est pas interactif non plus.
+    }
+    private void ShowCanvasElements(CanvasGroup canvasGroup)
+    {
+        board.enabled = false; // On désactive temporairement la board pendant le fade.
+        StartCoroutine(Fade(canvasGroup, 1f, 0.5f));
+        canvasGroup.blocksRaycasts = true; // Il peut recevoir des inputs.
+        canvasGroup.interactable = true; // On s'assure qu'il est interactif.
+    }
     public void NewGame()
     {
-        gameOver.alpha = 0f; // On voit plus l’écran de GameOver si jamais on le voyait.
-        gameOver.interactable = false; // Ne peut plus recevoir d’input.
+        HideCanvasElements(gameOver);
+        HideCanvasElements(scoreboard);
+        sideHUDReturn.SetActive(false); // Masque complètement le GameObject.
+        sideHUDBestTries.SetActive(true); // Affiche l'autre.
         SaveBestScores();
         board.ClearBoard(); // On nettoie tout.
         board.CreateTile(); // Création de nos deux tiles en passant par board qu’on a importé.
         board.CreateTile();
-        board.enabled = true; // Et oui, va falloir mettre enabled, on va désactiver la board en cas de game over, donc là on s’assure de le remettre.
         SetScore(0); // On réinitialise le score au début d'une nouvelle partie.
         bestScore.text = LoadBestScores().score.ToString(); // On met à jour l'affichage du meilleur score.
 
@@ -52,10 +77,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        board.enabled = false; // Board n'est plus clickable.
-        board.enabled = false; // On désactive le board pour arreter les inputs, déjà.
-        gameOver.interactable = true;  // On rend intarissable l’écran de GameOver qui a toujours été là mais était en alpha 0, ce qu’on change avec la Coroutine qui vient : 
-        StartCoroutine(Fade(gameOver, 1f, 1f)); // Animation d’apparition de l’écran objet tout juste ajouté.
+        ShowCanvasElements(gameOver); // On rend l'écran de Game Over visible et interactif.
         board.isNewGamePaused = true; // On met le jeu en pause de début lors du Game Over.
         SaveBestScores(); // On sauvegarde le meilleur score à la fin de la partie.
     }
@@ -75,7 +97,6 @@ public class GameManager : MonoBehaviour
             currentScoreData.score = score; // On met à jour le meilleur score dans l'objet ScoreData.
             currentScoreData.time = timer.chrono;
             PlayerPrefs.SetString("ScoreData", JsonUtility.ToJson(currentScoreData)); // On l'enregistre dans les PlayerPrefs.
-            Debug.Log("Saved ScoreData: " + JsonUtility.ToJson(currentScoreData));
         }
     }
 
@@ -100,6 +121,20 @@ public class GameManager : MonoBehaviour
         currentChrono.text = $"{minutes:D2}:{secondes:D2}";
     }
 
+    public void OpenScoreBoard()
+    {
+        ShowCanvasElements(scoreboard); // On rend l'écran du tableau des meilleurs scores visible et interactif.
+        sideHUDReturn.SetActive(true); // Affiche le bouton de retour.
+        sideHUDBestTries.SetActive(false); // Masque le bouton des meilleurs essais.
+    }
+
+    public void CloseScoreBoard()
+    {
+        HideCanvasElements(scoreboard);
+        sideHUDReturn.SetActive(false); // Masque le bouton de retour.
+        sideHUDBestTries.SetActive(true); // Affiche le bouton des meilleurs essais.
+    }
+
     // Premier outil de développement, ici pour supprimer les informations stockées dans PlayerPrefs.
     public void ClearPlayerPrefs()
     {
@@ -112,6 +147,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Datas are : " + LoadBestScores().score + " - " + LoadBestScores().time);
     }
+
     // Même logique que pour l’apparition, mais ici concernant l'alpha.
     private IEnumerator Fade(CanvasGroup canvasGroup, float targetAlpha, float duration)
     {
@@ -120,10 +156,14 @@ public class GameManager : MonoBehaviour
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
+            canvasGroup.blocksRaycasts = false; // Désactiver temporairement les interactions pendant le fade.
+            sideHUD.blocksRaycasts = false; // Désactiver temporairement les interactions du sideHUD pendant le fade.
             canvasGroup.alpha = Mathf.Lerp(startAlpha, targetAlpha, elapsed / duration);
             yield return null;
         }
         canvasGroup.alpha = targetAlpha;
+        canvasGroup.blocksRaycasts = true; // Réactiver les interactions après la fin du fade.
+        sideHUD.blocksRaycasts = true; // Réactiver les interactions du sideHUD après la fin du fade.
     }
 
     // Nouvelle classe pour stocker les informations de score.
