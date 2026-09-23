@@ -27,9 +27,12 @@ public class GameManager : MonoBehaviour
     private CanvasGroup sideHUD;
     [SerializeField]
     private GameObject sideHUDReturn;
-       [SerializeField]
+    [SerializeField]
     private GameObject sideHUDBestTries;
-
+    [SerializeField]
+    private TextMeshProUGUI bestScoreTEMP;
+    [SerializeField]
+    private TextMeshProUGUI bestTimeTEMP;
 
     public void Start()
     {
@@ -73,6 +76,12 @@ public class GameManager : MonoBehaviour
         SetChrono(0f); // On réinitialise le chrono au début d'une nouvelle partie.
         board.isNewGamePaused = true; // On met le jeu en pause de début pour la nouvelle partie.
         lastRunTimer = 0f; // On réinitialise le timer de la dernière partie.
+    }
+
+    private void FullfillScoreboard()
+    {
+        bestScoreTEMP.text = LoadBestScores().score.ToString();
+        bestTimeTEMP.text = LoadBestScores().time.ToString("F3");
     }
 
     public void GameOver()
@@ -123,6 +132,7 @@ public class GameManager : MonoBehaviour
 
     public void OpenScoreBoard()
     {
+        FullfillScoreboard(); // On met à jour les informations du tableau des meilleurs scores.
         ShowCanvasElements(scoreboard); // On rend l'écran du tableau des meilleurs scores visible et interactif.
         sideHUDReturn.SetActive(true); // Affiche le bouton de retour.
         sideHUDBestTries.SetActive(false); // Masque le bouton des meilleurs essais.
