@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 using UnityEngine.UI;
+// Ajout de liste.
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,10 +35,11 @@ public class GameManager : MonoBehaviour
     private TextMeshProUGUI bestScoreTEMP;
     [SerializeField]
     private TextMeshProUGUI bestTimeTEMP;
+    private List<ScoreData> storedScoreData;
 
     public void Start()
     {
-        NewGame();
+        NewGame();        
     }
 
     private void HideCanvasElements(CanvasGroup canvasGroup)
@@ -64,14 +67,14 @@ public class GameManager : MonoBehaviour
         board.CreateTile(); // Création de nos deux tiles en passant par board qu’on a importé.
         board.CreateTile();
         SetScore(0); // On réinitialise le score au début d'une nouvelle partie.
-        bestScore.text = LoadBestScores().score.ToString(); // On met à jour l'affichage du meilleur score.
+        bestScore.text = LoadBestScores()[0].score.ToString(); // On met à jour l'affichage du meilleur score.
 
         // Et de son chrono en cuttant aprés 3 décimales en adaptant au format mm:ss : 
-        float bestTime = LoadBestScores().time; // On récupère le meilleur chrono enregistré.
+        float bestTime = LoadBestScores()[0].time; // On récupère le meilleur chrono enregistré.
         int minutes = (int)(bestTime / 60);
         int secondes = (int)(bestTime % 60);
         // Application à l'affichage du meilleur chrono dans l'objet correspondant.
-        bestChrono.text = $"{minutes:D2}:{secondes:D2}";
+        bestChrono.text = $"{minutes:D2}:{secondes:D2}"; 
 
         SetChrono(0f); // On réinitialise le chrono au début d'une nouvelle partie.
         board.isNewGamePaused = true; // On met le jeu en pause de début pour la nouvelle partie.
@@ -80,8 +83,7 @@ public class GameManager : MonoBehaviour
 
     private void FullfillScoreboard()
     {
-        bestScoreTEMP.text = LoadBestScores().score.ToString();
-        bestTimeTEMP.text = LoadBestScores().time.ToString("F3");
+        // A venir.
     }
 
     public void GameOver()
@@ -99,20 +101,43 @@ public class GameManager : MonoBehaviour
 
     private void SaveBestScores()
     {
-        int bestScore = LoadBestScores().score;
-        if (score > bestScore) // Si le score actuel est supérieur au meilleur score enregistré,
-        {
-            ScoreData currentScoreData = new ScoreData(); // Nouvelle instance de ScoreData pour stocker les informations de score.
-            currentScoreData.score = score; // On met à jour le meilleur score dans l'objet ScoreData.
-            currentScoreData.time = timer.chrono;
-            PlayerPrefs.SetString("ScoreData", JsonUtility.ToJson(currentScoreData)); // On l'enregistre dans les PlayerPrefs.
-        }
+        ScoreData currentScoreData = new ScoreData();
+        currentScoreData.score = score; // On met à jour le meilleur score dans l'objet ScoreData.
+        currentScoreData.time = timer.chrono; // On met à jour le temps dans l'objet ScoreData.
+
+        // Ajout de l'objet à la liste des meilleurs scores.
+        List<ScoreData> bestScores = LoadBestScores(); // Chargement de la liste.
+        bestScores.Add(currentScoreData); // Ajout le ScoreData courant à la liste.
+
+            bestScores.Sort((a, b) => b.score.CompareTo(a.score)); // Tri décroissant en fonction des scores.
+            if (bestScores.Count > 5) // Si la liste est supérieure à 5 éléments.
+            {
+                bestScores = bestScores.GetRange(0, 5); // On ne garde que les 5 meilleurs scores.
+            }
+        // Puis création d'un objet ScoreDataList contenant la liste, tout est prêt pour l'envoie en save dans les PLayerPrefs.
+        ScoreDataList scoreDataList = new ScoreDataList { scores = bestScores }; 
+        PlayerPrefs.SetString("ScoreDataList", JsonUtility.ToJson(scoreDataList));
+        // Ligne qui signifie : "Pour sauvegarder les données dans les PlayerPrefs, je mets l'objet JSON sous forme de chaîne de caractères.
+        // Notre intitulé ScoreDataList, converti via le snippet JsonUtility en JSON, contient les données de scoreDataList.
+        Debug.Log("ScoreDataList sauvegardé dans PlayerPrefs : " + JsonUtility.ToJson(scoreDataList));
+        Debug.Log("LoadBestScores : " + JsonUtility.ToJson(LoadBestScores()));
+        Debug.Log("LoadBestScores index qui doit normalement s'être incrémenté : " + LoadBestScores().Count + "index total : " + LoadBestScores()[0] + "Premier scoring : " + LoadBestScores()[0].score);
     }
 
-    private ScoreData LoadBestScores()
+    private List<ScoreData> LoadBestScores()
     {
-        return JsonUtility.FromJson<ScoreData>(PlayerPrefs.GetString("ScoreData", JsonUtility.ToJson(new ScoreData()))); 
-        // On retourne le meilleur score enregistré sous format ScoreData.
+        // Chargement des meilleurs scores depuis les PlayerPrefs au nom de l'intitulé "ScoreDataList" défini dans SaveBestScores, 
+        // Et sinon, en générer une nouvelle.
+        string jsonContent = PlayerPrefs.GetString("ScoreDataList", JsonUtility.ToJson(new ScoreDataList()));
+
+        // Une nouvelle instance de ScoreDataList est créée et initialisée avec le contenu trouvé dans le JSON, toujours avec l'intitulé "ScoreDataList".
+        ScoreDataList scoreDataList = JsonUtility.FromJson<ScoreDataList>(jsonContent);
+       
+        Debug.Log("Contenu JSON dans PlayerPrefs : " + jsonContent);
+        Debug.Log("Contenu JSON converti en ScoreDataList : " + JsonUtility.ToJson(scoreDataList));
+
+        // Retourne la liste des meilleurs scores ou bien la nouvelle vierge.   
+        return scoreDataList.scores;
     }
 
     public void IncreaseScore(int amount) // La fonction appelée par Board.cs pour augmenter le score du joueur.
@@ -153,10 +178,10 @@ public class GameManager : MonoBehaviour
     }
 
     // Deuxieme outil pour afficher en Debug.Log ce qu'on obtiendra dans LoadBestScores().
-    public void ShowLoadBestScores()
+/*     public void ShowLoadBestScores()
     {
         Debug.Log("Datas are : " + LoadBestScores().score + " - " + LoadBestScores().time);
-    }
+    } */
 
     // Même logique que pour l’apparition, mais ici concernant l'alpha.
     private IEnumerator Fade(CanvasGroup canvasGroup, float targetAlpha, float duration)
@@ -182,6 +207,13 @@ public class GameManager : MonoBehaviour
     {
         public int score;
         public float time;
+    }
+
+    // Wrapper nécessaire car JsonUtility ne sait pas (dé)sérialiser une liste en tant que racine du JSON.
+    [System.Serializable]
+    public class ScoreDataList
+    {
+        public List<ScoreData> scores = new List<ScoreData>();
     }
 }
 
