@@ -142,7 +142,6 @@ public class GameManager : MonoBehaviour
 
         // Tri décroissant par score, puis par temps croissant en cas d'égalité (meilleur temps en premier).
         // D'abord un .sort qui compare les score. 
-    
         bestScores.Sort((a, b) => a.score != b.score ? b.score.CompareTo(a.score) : a.time.CompareTo(b.time));
         if (bestScores.Count > 5) // Si la liste est supérieure à 5 éléments.
         {
